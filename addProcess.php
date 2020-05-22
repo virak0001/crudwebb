@@ -5,11 +5,13 @@
         $lastname = $_POST['Lastname'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $class_id = $_POST['class'];
+
 
         $insert = mysqli_query($connection, "
         
-        INSERT INTO student (Firstname, Lastname, pwd, email)
-        VALUES ('$firstname', '$lastname', '$password', '$email');
+        INSERT INTO student (Firstname, Lastname, pwd, email, class_id)
+        VALUES ('$firstname', '$lastname', '$password', '$email', $class_id);
         
         ");
 
